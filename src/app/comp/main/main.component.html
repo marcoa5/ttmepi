@@ -1,1 +1,5 @@
-<p>main works!</p>
+<h1>Test</h1>
+
+<p *ngIf="userName">{{userName}}</p>
+
+<button mat-raised-button color="primary" (click)="login()" *ngIf="userName=='na'">Login</button>
