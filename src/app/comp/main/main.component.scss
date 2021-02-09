@@ -1,0 +1,70 @@
+.container{
+    display:flex;
+    width: 100%;
+    height:100%;
+    flex-direction: column;
+}
+
+.header{
+    height: 70px;
+    width: 100%;
+    background-color:rgb(255,205,0);
+    display: flex;
+    align-items: center;
+}
+
+.but{
+    width: 10%;
+}
+
+.user{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 10px 0 rgb(66, 85, 99);
+    border-radius: 15px;
+    margin: 0 20px 0 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.title{
+    width: 100%;
+}
+
+.title h1{
+    margin:0 0 0 20px;
+    font-weight: 800;
+    color:rgb(66, 85, 99)
+}
+
+.user p{
+    min-width: 70px;
+    margin: 0;
+    font-size: 9pt;
+    font-weight: 600;
+    color: rgb(66, 85, 99);
+}
+
+.faceIcon{
+    color: rgb(66, 85, 99);
+    margin: 0;
+}
+
+.center{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sideMenu{
+    width: 500px;
+    background-color: rgb(66, 85, 99);
+}
+
+.main{
+    width: 100%;
+}
+

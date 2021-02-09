@@ -1,5 +1,23 @@
-<h1>Test</h1>
+<div class="container" (window:resize)="onResize($event)" *ngIf="userName!='na'">
+    <div class="header">
+        <div class="but" *ngIf="!disButton">
+            <button mat-icon-button color="accent" (click)="menu()">
+                <mat-icon *ngIf="icon">menu</mat-icon>
+                <mat-icon *ngIf="!icon">close</mat-icon>
+            </button>
+        </div>
+        <div class="title"><h1>Epiroc 
+            <span *ngIf="disButton">Territory Management</span>
+            <span *ngIf="!disButton">TTM</span>
+        </h1></div>
+        <div class="user" (click)="logout()"><mat-icon class="faceIcon" *ngIf="disButton">face</mat-icon><p>{{userName}}</p></div>
+    </div>
+    <div class="center">
+        <div class="sideMenu" id="sideMenu" *ngIf="openMenu">
 
-<p *ngIf="userName">{{userName}}</p>
+        </div>
+        <div class="main">
 
-<button mat-raised-button color="primary" (click)="login()" *ngIf="userName=='na'">Login</button>
+        </div>
+    </div>
+</div>
