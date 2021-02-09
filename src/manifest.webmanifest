@@ -1,8 +1,8 @@
 {
   "name": "Territory Management",
   "short_name": "TTM",
-  "theme_color": "#1976d2",
-  "background_color": "#1976d2",
+  "theme_color": "#ffcd00",
+  "background_color": "#ffcd00",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
