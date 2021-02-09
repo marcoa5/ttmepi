@@ -10,7 +10,7 @@
             <span *ngIf="disButton">Territory Management</span>
             <span *ngIf="!disButton">TTM</span>
         </h1></div>
-        <div class="user" (click)="logout()"><mat-icon class="faceIcon" *ngIf="disButton">face</mat-icon><p>{{userName}}</p></div>
+        <div class="user" (click)="logout()" *ngIf="userName"><mat-icon class="faceIcon" *ngIf="disButton">account_circle</mat-icon><p>{{userName}}</p></div>
     </div>
     <div class="center">
         <div class="sideMenu" id="sideMenu" *ngIf="openMenu">

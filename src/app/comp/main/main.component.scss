@@ -18,14 +18,14 @@
 }
 
 .user{
-    width: 160px;
+    width: 130px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     box-shadow: 0 0 10px 0 rgb(66, 85, 99);
     border-radius: 15px;
     margin: 0 20px 0 0;
-    padding: 5px;
+    padding: 2px;
     cursor: pointer;
 }
 
@@ -36,12 +36,14 @@
 .title h1{
     margin:0 0 0 20px;
     font-weight: 800;
-    color:rgb(66, 85, 99)
+    color:rgb(66, 85, 99);
+    font-size: 14pt
 }
 
 .user p{
     min-width: 70px;
-    margin: 0;
+    margin: 0 5px;
+    text-align: center;
     font-size: 9pt;
     font-weight: 600;
     color: rgb(66, 85, 99);
@@ -60,7 +62,7 @@
 }
 
 .sideMenu{
-    width: 500px;
+    width: 300px;
     background-color: rgb(66, 85, 99);
 }
 

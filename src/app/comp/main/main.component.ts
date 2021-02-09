@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import firebase from 'firebase/app';
 import 'firebase/database';
 import 'firebase/auth'
-import { of } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog'
+import { DialogLogoutComponent } from '../dialog-logout/dialog-logout.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCeBGl6Y21nRXiQNYpDsaLt1P5EtxkWoJQ",
@@ -19,14 +20,15 @@ const firebaseConfig = {
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
 userName: any;
 openMenu=false;
 icon=false;
 disButton=false;
-  constructor() { 
+  constructor(public dialog: MatDialog) { 
     firebase.initializeApp(firebaseConfig) 
   }
-  
+
   ngOnInit(): void {
     firebase.auth().onAuthStateChanged(user=>{
       if(user){
@@ -55,8 +57,12 @@ disButton=false;
     firebase.auth().signInWithRedirect(provider)
   }
 
-  logout(){
-    firebase.auth().signOut()
+  logout(): void{
+    var dialogRef = this.dialog.open(DialogLogoutComponent)
+    dialogRef.afterClosed().subscribe(res=>{
+      if(res)   firebase.auth().signOut()
+    })
+
   }
 
   onResize(e:any){
@@ -77,6 +83,5 @@ disButton=false;
       this.icon = !this.icon
     }
     if(window.innerWidth >= 600) this.openMenu = true
-  }
-
+  } 
 }
