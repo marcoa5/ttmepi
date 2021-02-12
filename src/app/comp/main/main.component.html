@@ -1,11 +1,5 @@
 <div class="container" (window:resize)="onResize($event)" *ngIf="userName!='na'">
     <div class="header">
-        <div class="but" *ngIf="!disButton">
-            <button mat-icon-button color="accent" (click)="menu()">
-                <mat-icon *ngIf="icon">menu</mat-icon>
-                <mat-icon *ngIf="!icon">close</mat-icon>
-            </button>
-        </div>
         <div class="title"><h1>Epiroc 
             <span *ngIf="disButton">Territory Management</span>
             <span *ngIf="!disButton">TTM</span>
@@ -13,8 +7,8 @@
         <div class="user" (click)="logout()" *ngIf="userName"><mat-icon class="faceIcon" *ngIf="disButton">account_circle</mat-icon><p>{{userName}}</p></div>
     </div>
     <div class="center">
-        <div class="sideMenu" id="sideMenu" *ngIf="openMenu">
-
+        <div class="img">
+            
         </div>
         <div class="main">
 
