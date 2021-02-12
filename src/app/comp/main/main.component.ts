@@ -20,13 +20,16 @@ const firebaseConfig = {
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-
+Actions:any[]=[];
 userName: any;
 openMenu=false;
 icon=false;
 disButton=false;
   constructor(public dialog: MatDialog) { 
     firebase.initializeApp(firebaseConfig) 
+    for(var i = 1;i<101;i++){
+      this.Actions.push(i)
+    }
   }
 
   ngOnInit(): void {
