@@ -30,4 +30,8 @@ export class ListaComponent implements OnInit {
     console.log(this.dataSource)
   }
 
+  elOnClick(e: any){
+    alert(`you clicked on '${e.target.innerText}'`)
+  }
+
 }
