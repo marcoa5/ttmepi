@@ -1,4 +1,15 @@
-.mat-table{
-    max-width: 10500px;
-    width: 100%;
+.cust{
+    width: 150px; height:150px;
+    box-shadow: 0 0 5px 0 black;
+    border-radius: 10px;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    max-height: 100%;
 }

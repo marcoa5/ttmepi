@@ -16,22 +16,12 @@ export interface Lista{
   styleUrls: ['./lista.component.scss']
 })
 export class ListaComponent implements OnInit {
-  displayedColumns=['c1','c2','c3']
-  dataSource: Observable<Lista>[]=[];
+  dataSource: any[]=[];
   constructor() { }
 
   ngOnInit(): void {
-    var t = firebase.database().ref('customers').once('value')
-    .then(a=>{
-      this.dataSource = Object.values(a.val())
-    })
-
-
-    console.log(this.dataSource)
+    from(firebase.database().ref('customers').once('value')).subscribe(g=>{this.dataSource = Object.values(g.val())})
   }
 
-  elOnClick(e: any){
-    alert(`you clicked on '${e.target.innerText}'`)
-  }
 
 }

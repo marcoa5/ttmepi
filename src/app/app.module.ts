@@ -12,7 +12,6 @@ import { environment } from '../environments/environment';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogLogoutComponent } from './comp/dialog-logout/dialog-logout.component';
 import { ListaComponent } from './comp/lista/lista.component'
-import { MatTableModule } from '@angular/material/table'
 
 @NgModule({
   declarations: [
@@ -23,7 +22,7 @@ import { MatTableModule } from '@angular/material/table'
   ],
   imports: [
     BrowserModule, MatIconModule,
-    AppRoutingModule, MatButtonModule, MatTableModule,
+    AppRoutingModule, MatButtonModule,
     BrowserAnimationsModule, MatDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
