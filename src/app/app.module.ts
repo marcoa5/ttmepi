@@ -10,17 +10,22 @@ import { MatIconModule } from '@angular/material/icon';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MatDialogModule } from '@angular/material/dialog';
-import { DialogLogoutComponent } from './comp/dialog-logout/dialog-logout.component'
+import { DialogLogoutComponent } from './comp/dialog-logout/dialog-logout.component';
+import { HomeComponent } from './comp/home/home.component'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    DialogLogoutComponent
+    DialogLogoutComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule, MatIconModule,
-    AppRoutingModule, MatButtonModule,
+    BrowserModule, MatIconModule, MatInputModule, FormsModule,
+    AppRoutingModule, MatButtonModule, MatFormFieldModule, ReactiveFormsModule,
     BrowserAnimationsModule, MatDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],

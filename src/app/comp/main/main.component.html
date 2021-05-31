@@ -1,17 +1,13 @@
-<div class="container" (window:resize)="onResize($event)" *ngIf="userName!='na'">
-    <div class="header">
+
+<div class="container" (window:resize)="onResize($event)" *ngIf="userName!='na'" >
+    <div class="header" [class.mat-elevation-z4]="true">
         <div class="title"><h1>Epiroc 
             <span *ngIf="disButton">Territory Management</span>
             <span *ngIf="!disButton">TTM</span>
         </h1></div>
-        <div class="user" (click)="logout()" *ngIf="userName"><mat-icon class="faceIcon" *ngIf="disButton">account_circle</mat-icon><p>{{userName}}</p></div>
+        <div class="user" (click)="logout()" *ngIf="userName" [class.mat-elevation-z4]="true"><mat-icon class="faceIcon" *ngIf="disButton" >account_circle</mat-icon><p>{{userName}}</p></div>
     </div>
     <div class="center">
-        <div class="img">
-            
-        </div>
-        <div class="main">
-            <div class="t" *ngFor="let a of Actions">{{ a }}</div>
-        </div>
+        <router-outlet></router-outlet>
     </div>
 </div>

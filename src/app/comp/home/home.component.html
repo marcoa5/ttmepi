@@ -1,0 +1,10 @@
+<form class="cont" [formGroup]="form">
+    <mat-form-field appearance="outline" class="rr">
+        <mat-label>Search</mat-label>
+        <input matInput type="text" autocomplete="off" formControlName="cerca">
+        <button mat-icon-button matSuffix (click)="cer($event, form)">
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field>
+</form>
+{{testo}}

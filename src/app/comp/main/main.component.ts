@@ -27,9 +27,7 @@ icon=false;
 disButton=false;
   constructor(public dialog: MatDialog) { 
     firebase.initializeApp(firebaseConfig) 
-    for(var i = 1;i<101;i++){
-      this.Actions.push(i)
-    }
+    
   }
 
   ngOnInit(): void {
